@@ -16,7 +16,7 @@ var y = new Audio("./Assets/discord-unmute-sound.mp3"); // Make sure this URL po
 
 function mic() {
     if (!micO) {
-        x.play();
+        
         document.getElementById("mic").className = "fa-solid fa-microphone-slash mute";
         micO = true;
     } else {
@@ -28,12 +28,12 @@ function mic() {
 
 function headp() {
     if (!headO) {
-        x.play();
+        
         document.getElementById("head").className = "fa-solid fa-headphones mute";
         headO = true;
     } else {
         document.getElementById("head").className = "fa-solid fa-headphones";
-        y.play();
+        
         headO = false;
     }
 }
@@ -50,4 +50,39 @@ function openToggle() {
             toggleOpen = false;
         }
     }
-}s
+}
+let darkMode = false;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("themeToggle");
+    const rightside = document.getElementById("r");
+    const sidebar = document.getElementById("s");
+
+    toggleBtn.addEventListener("click", () => {
+        if (!darkMode) {
+            rightside.style.backgroundColor = "#2d2f35";
+            sidebar.style.backgroundColor = "#36393f";
+        } else {
+            rightside.style.backgroundColor = "white";
+            sidebar.style.backgroundColor = "white";
+        }
+        darkMode = !darkMode;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const mainImage = document.getElementById("mainImage");
+
+    // Select all friend name buttons
+    const friendButtons = document.querySelectorAll(".username-btn");
+
+    friendButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            mainImage.src = button.dataset.img || "./Assets/chat.png";
+        });
+    });
+});
+document.getElementById("collapseBtn").addEventListener("click", function () {
+    const sidebar = document.getElementById("sidebarContainer");
+    sidebar.classList.toggle("collapsed");
+});

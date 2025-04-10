@@ -15,7 +15,7 @@ main {
 aside {
     width: 6%;
     padding: 12px;
-    background-color: #e4e5e9;
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -31,7 +31,7 @@ aside i:nth-child(1) {
     justify-content: center;
     padding: 10px 15px;
     color: white;
-    background-color: #5865f2;
+    background-color: #36393f;
     border-radius: 15px;
     width: 45px;
     height: 45px;
@@ -76,7 +76,7 @@ hr {
 main .sidebar-chat {
     width: 19%;
     height: 100vh;
-    background-color: #f2f3f5;
+    background-color: #36393f;
     position: relative;
     overflow-y: auto;
 }
@@ -217,7 +217,7 @@ main .sidebar-chat .dm .friends .f-li {
 }
 
 main .sidebar-chat .dm .friends .f-li p {
-    color: #5b5e65;
+    color: #eff2f8;
     font-weight: 500;
     font-size: 16px;
 }
@@ -232,7 +232,7 @@ main .sidebar-chat .dm .friends .f-li:hover>.img-wrapper::after {
 }
 
 main .sidebar-chat .dm .friends .f-li:hover>p {
-    color: #4d5058;
+    color: #08090a;
 }
 
 main .sidebar-chat .dm .friends .f-li .img-wrapper {
@@ -264,7 +264,7 @@ main .sidebar-chat .dm .friends .f-li .img-wrapper::after {
 
 main .sidebar-chat .dm .friends .f-li i {
     font-size: 14px;
-    color: #5b5e65;
+    color: #fcfdff;
     position: absolute;
     top: 50%;
     right: 8px;
@@ -563,7 +563,7 @@ main .rightside-area .bottom {
 }
 
 main .rightside-area .bottom .left {
-    background-color: #fff;
+    background-color: #2d2f35;
     height: 100%;
     width: 65%;
     border-right: 1px solid #e9e9ea;
@@ -572,6 +572,12 @@ main .rightside-area .bottom .left {
     justify-content: center;
     flex-direction: column;
     gap: 50px;
+}
+main .rightside-area .bottom .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    
 }
 
 main .rightside-area .bottom .left p {
@@ -709,3 +715,19 @@ main .rightside-area .bottom .right .sec p {
         position: sticky;
     }
 }
+
+.username-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .username-btn:hover {
+    text-decoration: underline;
+  }
+  

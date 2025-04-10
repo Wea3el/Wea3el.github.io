@@ -13,23 +13,12 @@
 </head>
 
 <body>
-    <div class="loader-home" id="loader">
-        <i class="fa-brands fa-discord"></i>
-        <h1>DID YOU KNOW</h1>
-        <p class="rest-of-words">
-            <span>
-                <span class="button-style">CTRL</span>
-                <span class="button-style">K</span>
-                to quickly find a previous
-            </span>
-            <span>conversation or channel.</span>
-        </p>
-    </div>
+    
     <main>
         <aside>
             <i class="fa-brands fa-discord" onclick="openToggle()"></i>
             <hr>
-            <img src="./Assets/Azaan.jpeg" alt="">
+            <img src="./Assets/discord.png" alt="">
             <div class="icon"><i class="fa-solid fa-plus"></i></div>
             <div class="icon"><i class="fa-solid fa-compass"></i></div>
             <hr>
@@ -76,49 +65,40 @@
                 <h1>DIRECT MESSAGES <i class="fa fa-plus"></i></h1>
                 <div class="friends">
                     <div class="f-li">
-                        <div class="img-wrapper">
-                            <img src="./Assets/img-icon 4.jpeg" alt="icon">
-                        </div>
-                        <p>Mr_Sigma</p>
+                        <button id="test1Btn" class="img-wrapper" style="width: 30px; height: 30px; padding: 0; border: none; background: none;">
+                          <img src="./Assets/discord.png" alt="icon" style="width: 100%; height: 100%; object-fit: cover;">
+                        </button>
+                        <button class="username-btn" data-img="./Assets/test1_chat.png">Test_1</button>
                         <i class="fa fa-xmark"></i>
-                    </div>
-                    <div class="f-li">
+                      </div>
+                      
+                      <div class="f-li">
                         <div class="img-wrapper">
-                            <img src="./Assets/img-icon 3.png" alt="icon">
+                          <img src="./Assets/discord.png" alt="icon">
                         </div>
-                        <p>Gpro-fighter</p>
+                        <button class="username-btn" data-img="./Assets/test2_chat.png">Test_3</button>
                         <i class="fa fa-xmark"></i>
-                    </div>
-                    <div class="f-li">
+                      </div>
+                      
+                      <div class="f-li">
                         <div class="img-wrapper">
-                            <img src="./Assets/img-icon 2.png" alt="icon">
+                          <img src="./Assets/discord.png" alt="icon">
                         </div>
-                        <p>Moiz Hussain</p>
+                        <button class="username-btn" data-img="./Assets/test3_chat.png">Test_4</button>
                         <i class="fa fa-xmark"></i>
-                    </div>
-                    <div class="f-li">
-                        <div class="img-wrapper">
-                            <img src="./Assets/img-icon 1.png" alt="icon">
-                        </div>
-                        <p>nxn</p>
-                        <i class="fa fa-xmark"></i>
-                    </div>
-                    <div class="f-li">
-                        <div class="img-wrapper">
-                            <img src="./Assets/img-icon.png" alt="icon">
-                        </div>
-                        <p>Unknown_Inj3ctor</p>
-                        <i class="fa fa-xmark"></i>
-                    </div>
+                      </div>
+                      
+                      
+                      
                 </div>
             </div>
             <div class="profile">
                 <div class="left">
                     <div class="img-wrapper">
-                        <img src="./Assets/img-icon-profile.jpeg" alt="profile-icon">
+                        <img src="./Assets/discord.png" alt="profile-icon">
                     </div>
                     <div class="txt">
-                        <p>Anonymou5</p>
+                        <p>Wesley</p>
                         <span>Online</span>
                     </div>
                 </div>
@@ -146,7 +126,9 @@
                     <button>All</button>
                     <button>Pending</button>
                     <button>Blocked</button>
+                    <button id="themeToggle">Toggle Theme</button>
                     <button>Add Freind</button>
+                    
                 </div>
             </div>
               <div class="icons-end">
@@ -157,8 +139,8 @@
             </nav>
             <div class="bottom">
                 <div class="left">
-                    <img src="./Assets/1641b16ec6ac0c4e733d.svg" alt="img-centre">
-                    <p>No one's around to play with Wumpus.</p>
+                    <img id="mainImage" src="./Assets/1641b16ec6ac0c4e733d.svg" alt="img-centre">
+                    
                 </div>
                 <div class="right">
                     <h1>Active Now</h1>
