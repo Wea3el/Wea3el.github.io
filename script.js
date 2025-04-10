@@ -1,56 +1,53 @@
-const servers = ["Game Hub", "Dev Room", "Study Group"];
-const channels = ["#general", "#voice-chat", "#memes"];
-let selectedServer = servers[0];
-let selectedChannel = channels[0];
+var micO = false;
+var headO = false;
+var toggleOpen = false;
 
-const serversEl = document.getElementById("servers");
-const channelsEl = document.getElementById("channels");
-const chatHeaderEl = document.getElementById("chat-header");
-const chatMessagesEl = document.getElementById("chat-messages");
+window.onload = function () {
+    setTimeout(function () {
+        var loader = document.getElementById('loader');
+        if (loader) {
+            loader.remove();
+        }
+    }, 2000);
+};
 
-function renderServers() {
-  serversEl.innerHTML = "";
-  servers.forEach(server => {
-    const btn = document.createElement("button");
-    btn.className = "server-btn";
-    btn.textContent = server[0];
-    btn.onclick = () => {
-      selectedServer = server;
-      renderChannels();
-      renderChat();
-    };
-    serversEl.appendChild(btn);
-  });
+var x = new Audio("./Assets/discordmute_IZNcLx2.mp3"); // Make sure this URL points directly to an audio file
+var y = new Audio("./Assets/discord-unmute-sound.mp3"); // Make sure this URL points directly to an audio file
+
+function mic() {
+    if (!micO) {
+        x.play();
+        document.getElementById("mic").className = "fa-solid fa-microphone-slash mute";
+        micO = true;
+    } else {
+        y.play();
+        document.getElementById("mic").className = "fa-solid fa-microphone";
+        micO = false;
+    }
 }
 
-function renderChannels() {
-  channelsEl.innerHTML = `<h3 style="margin: 0 0 10px 10px;">${selectedServer}</h3>`;
-  channels.forEach(channel => {
-    const btn = document.createElement("button");
-    btn.className = "channel-btn";
-    btn.textContent = channel;
-    btn.onclick = () => {
-      selectedChannel = channel;
-      renderChat();
-    };
-    channelsEl.appendChild(btn);
-  });
+function headp() {
+    if (!headO) {
+        x.play();
+        document.getElementById("head").className = "fa-solid fa-headphones mute";
+        headO = true;
+    } else {
+        document.getElementById("head").className = "fa-solid fa-headphones";
+        y.play();
+        headO = false;
+    }
 }
 
-function renderChat() {
-  chatHeaderEl.textContent = selectedChannel;
-  chatMessagesEl.innerHTML = `
-    <div class="chat-message">
-      <div class="chat-message-user">@Alex</div>
-      <div>Hey, anyone down for a game later?</div>
-    </div>
-    <div class="chat-message">
-      <div class="chat-message-user">@Jamie</div>
-      <div>Sure! Let’s go at 9.</div>
-    </div>
-  `;
-}
-
-renderServers();
-renderChannels();
-renderChat();
+function openToggle() {
+    if (window.innerWidth < 750) {
+        if (!toggleOpen) {
+            document.getElementById("s").style.display = "none";
+            document.getElementById("r").style.display = "flex";
+            toggleOpen = true;
+        } else {
+            document.getElementById("s").style.display = "block";
+            document.getElementById("r").style.display = "none";
+            toggleOpen = false;
+        }
+    }
+}s
